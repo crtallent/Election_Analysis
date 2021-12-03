@@ -1,0 +1,96 @@
+>>> counties = ["Arapahoe", "Denver", "Jeferson"]
+>>> countes[0] # above, created a list, this line return 1st item in list - first item is at 0 index
+Traceback (most recent call last):      
+  File "<stdin>", line 1, in <module>   
+NameError: name 'countes' is not defined
+>>> counties[0] # above, created a list, this line return 1st item in list - first item is at 0 index
+'Arapahoe'
+>>> print(counties[2]) #print 3rd index in list
+Jeferson
+>>> print(counties[-1] # print last index in list
+... 
+... 
+... 
+... 
+... 
+... 
+... )
+Jeferson
+>>> # ... indicates need to close parentheses      
+>>> len(counties) # find number of items in list
+3
+>>> counties[0:1] # returns first item from list due to slicing
+['Arapahoe']
+>>> counties[:2] # returns first and second item
+['Arapahoe', 'Denver']
+>>> counties[1:] # omits first item 
+['Denver', 'Jeferson']
+>>> counties.append("El Paso") # add El Paso to list at end
+>>> counties
+['Arapahoe', 'Denver', 'Jeferson', 'El Paso']
+>>> # specify where to put item in a list: 
+>>> counties.insert(2, "El Paso") # insert El Paso to 3rd index
+>>> counties
+['Arapahoe', 'Denver', 'El Paso', 'Jeferson', 'El Paso']
+>>> counties.remove("El Paso") # removes last El Paso   
+>>> counties
+['Arapahoe', 'Denver', 'Jeferson', 'El Paso']
+>>> # above removes first El Paso
+>>> counties.pop(3) # removes index 3 - 4th item in list
+'El Paso'
+>>> counties
+['Arapahoe', 'Denver', 'Jeferson']
+>>> counties[2] = "El Paso" # replace 3rd index with El Paso
+>>> counties
+['Arapahoe', 'Denver', 'El Paso']
+>>> counties_tuple = ("Arapahoe", "Denver", "Jefferson") # creates immutable tuple
+>>> len(counties_tuple) # returns number of items
+3
+>>> counties_tuple[1] # return 1st index item - 2nd in list
+'Denver'
+>>> counties_dict = {} # create a dictionary
+>>> counties_dict["Arapahoe"] = 422829  # create a dictionary key and its value
+>>> counties_dict
+{'Arapahoe': 422829}
+>>> counties_dict["Denver"] = 463353
+>>> counties_dict["Jefferson"] = 432438
+>>> counties_dict
+{'Arapahoe': 422829, 'Denver': 463353, 'Jefferson': 432438}
+>>> len(counties_dict) # get number of entries
+3
+>>> counties_dict.items() # get number of objects in dict
+dict_items([('Arapahoe', 422829), ('Denver', 463353), ('Jefferson', 432438)])
+>>> counties_dict.keys() # get all keys in dict
+dict_keys(['Arapahoe', 'Denver', 'Jefferson'])
+>>> dict_values() # get all values in dict
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'dict_values' is not defined
+>>> counties_dict.values() # get all values in dict
+dict_values([422829, 463353, 432438])
+>>> counties_dict.get("Denver") # get value in dict key     
+463353
+>>> counties_dict["Arapahoe"] # does the same as above
+422829
+>>> voting_data = [] # list of dictonaries creation
+>>> voting_data.append{"county": "Arapahoe", "registered_voters": 422829}) # add a key and value to dictionary
+  File "<stdin>", line 1
+    voting_data.append{"county": "Arapahoe", "registered_voters": 422829}) # add a key and value to dictionary
+                      ^
+SyntaxError: invalid syntax
+>>> voting_data.append"county": "Arapahoe", "registered_voters": 422829}) # add a key and value to dictionary  
+  File "<stdin>", line 1
+    voting_data.append"county": "Arapahoe", "registered_voters": 422829}) # add a key and value to dictionary
+                             ^
+SyntaxError: invalid syntax
+>>> voting_data.append({"county": "Arapahoe", "registered_voters": 422829}) # add a key and value to dictionary
+>>> voting_data.append{"county": "Denver", "registered_voters": 463353}) # add a key and value to dictionary   
+  File "<stdin>", line 1
+    voting_data.append{"county": "Denver", "registered_voters": 463353}) # add a key and value to dictionary
+                      ^
+SyntaxError: invalid syntax
+>>> voting_data.append({"county": "Denver", "registered_voters": 463353})
+>>> voting_data.append({"county": "Jefferson", "registered_voters": 432438})
+>>> voting_data # get the items
+[{'county': 'Arapahoe', 'registered_voters': 422829}, {'county': 'Denver', 'registered_voters': 463353}, {'county': 'Jefferson', 'registered_voters': 432438}]
+>>>
