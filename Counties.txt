@@ -1,0 +1,567 @@
+
+c_tal@LAPTOP-TA85EDV1 MINGW64 ~/Desktop/Election_Analysis (main)
+$  /usr/bin/env C:\\Users\\c_tal\\AppData\\Local\\Programs\\Python\\Python37\\python.exe c:\\Users\\c_tal\\.vscode\\extensions\\ms-python.python-2021.11.1422169775\\pythonFiles\\lib\\python\\debugpy\\launcher 55053 -- c:\\Users\\c_tal\\Desktop\\Election_Analysis\\Python_practice.py 
+Denver
+
+c_tal@LAPTOP-TA85EDV1 MINGW64 ~/Desktop/Election_Analysis (main)
+$  cd c:\\Users\\c_tal\\Desktop\\Election_Analysis ; /usr/bin/env C:\\Users\\c_tal\\AppData\\Local\\Programs\\Python\\Python37\\python.exe c:\\Users\\c_tal\\.vscode\\extensions\\ms-python.python-2021.11.1422169775\\pythonFiles\\lib\\python\\debugpy\\launcher 55088 -- c:\\Users\\c_tal\\Desktop\\Election_Analysis\\Python_practice.py 
+Denver
+El Paso is not the list of counties. 
+
+c_tal@LAPTOP-TA85EDV1 MINGW64 ~/Desktop/Election_Analysis (main)
+$  cd c:\\Users\\c_tal\\Desktop\\Election_Analysis ; /usr/bin/env C:\\Users\\c_tal\\AppData\\Local\\Programs\\Python\\Python37\\python.exe c:\\Users\\c_tal\\.vscode\\extensions\\ms-python.python-2021.11.1422169775\\pythonFiles\\lib\\python\\debugpy\\launcher 54794 -- c:\\Users\\c_tal\\Desktop\\Election_Analysis\\Python_practice.py
+Denver
+El Paso is not the list of counties.
+Arapahoe or El Paso is not in the list of counties.
+
+c_tal@LAPTOP-TA85EDV1 MINGW64 ~/Desktop/Election_Analysis (main)
+$  cd c:\\Users\\c_tal\\Desktop\\Election_Analysis ; /usr/bin/env C:\\Users\\c_tal\\AppData\\Local\\Programs\\Python\\Python37\\python.exe c:\\Users\\c_tal\\.vscode\\extensions\\ms-python.python-2021.11.1422169775\\pythonFiles\\lib\\python\\debugpy\\launcher 54807 -- c:\\Users\\c_tal\\Desktop\\Election_Analysis\\Python_practice.py
+Denver
+El Paso is not the list of counties.
+Arapahoe or El Paso is not in the list of counties.
+Arapahoe or El Paso is in the list of counties.
+
+c_tal@LAPTOP-TA85EDV1 MINGW64 ~/Desktop/Election_Analysis (main)
+$ python
+Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> x = 0
+>>> while x <= 5:
+... print(x)
+  File "<stdin>", line 2
+    print(x)
+        ^
+IndentationError: expected an indented block
+>>> x = 0
+>>> while x <= 5:
+...     print(x)
+... x = x + 1 # set variable to 0 before entering loop, test if x is less than 5, if true, print value of x, increment x by 1, test again
+  File "<stdin>", line 3
+    x = x + 1 # set variable to 0 before entering loop, test if x is less than 5, if true, print value of x, increment x by 1, test again
+    ^
+SyntaxError: invalid syntax
+>>> x = 0
+>>> while x <= 5:
+...     print(x)
+...     x = x + 1
+... 
+0
+1
+2
+3
+4
+5
+>>> for county in counties:
+...     print(county)
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'counties' is not defined
+>>> counties = ["Arapahoe", "Denver", "Jefferson"]
+>>> if counties[1] == "Denver": # print item if second item in list is Denver
+...     print(counties[1])
+... counties = ["Arapahoe", "Denver", "Jefferson"]
+  File "<stdin>", line 3
+    counties = ["Arapahoe", "Denver", "Jefferson"]
+           ^
+SyntaxError: invalid syntax
+>>> if "El Paso" in counties:
+...     print("El Paso is in the list of counties. ")    
+... else:
+...     print("El Paso is not the list of counties. ")
+... if "Arapahoe" in counties and "El Paso" in counties:
+  File "<stdin>", line 5
+    if "Arapahoe" in counties and "El Paso" in counties:
+     ^
+SyntaxError: invalid syntax
+>>>     print("Arapahoe and El Paso are in the list of counties. ")  
+  File "<stdin>", line 1
+    print("Arapahoe and El Paso are in the list of counties. ")
+    ^
+IndentationError: unexpected indent
+>>> else:
+  File "<stdin>", line 1
+    else:
+       ^
+SyntaxError: invalid syntax
+>>>     print("Arapahoe or El Paso is not in the list of counties. ")
+  File "<stdin>", line 1
+    print("Arapahoe or El Paso is not in the list of counties. ")
+    ^
+IndentationError: unexpected indent
+>>> if "Arapahoe" in counties or "El Paso" in counties:
+...     print("Arapahoe or El Paso is in the list of counties. ") 
+... else:
+...     print("Arapahoe and El Paso are not in the list of counties. ") 
+... 
+Arapahoe or El Paso is in the list of counties. 
+>>> for county in counties:
+...     print(county)
+... 
+Arapahoe
+Denver
+Jefferson
+>>> # above is iterating through list of counties - for loop
+>>> for i in range(len(counties)):
+...     print(counties[i]) # iterate through list - i is index, value of 0, 1, 2 in counties list, len gives length - variable increases as loops
+... 
+Arapahoe
+Denver
+Jefferson
+>>> counties_dict = {"Arapahoe": 422829, "Denver": 463353, "Jefferson": 432438}
+>>> for county in counties_dict: #get only keys
+...     print(county)
+... 
+Arapahoe
+Denver
+Jefferson
+>>> for county in counties_dict.keys(): # also get keys
+...     print(county)
+... 
+Arapahoe
+Denver
+Jefferson
+>>> for voters in counties_dict.values(): # get values only
+...     print(voters)
+... 
+422829
+463353
+432438
+>>> for county in counties_dict:
+...     print(counties_dict[county])
+... 
+422829
+463353
+432438
+>>> for county in counties_dict:
+...     print(counties.dict.get(county))
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+AttributeError: 'list' object has no attribute 'dict'
+>>> for county in counties_dict:
+...     print(counties_dict.get(county))
+... 
+422829
+463353
+432438
+>>> for key, value in dictionary_name.items(): # print key-value pair
+...     print(key, value)
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'dictionary_name' is not defined
+>>> for county, voters in counties_dict.items():
+...     print(county, voters)
+... 
+Arapahoe 422829
+Denver 463353
+Jefferson 432438
+>>> for county, voters in counties_dict.items():
+...     print(county +  "has" + voters + "registered voters.")  
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+TypeError: can only concatenate str (not "int") to str
+>>> for county, voters in counties_dict.items()
+  File "<stdin>", line 1
+    for county, voters in counties_dict.items()
+                                              ^
+SyntaxError: invalid syntax
+>>> for county, voters in counties_dict.items():
+...     print(county + "county" + "has" + str(voters) + "registered voters.")
+... 
+Arapahoecountyhas422829registered voters.
+Denvercountyhas463353registered voters.
+Jeffersoncountyhas432438registered voters.
+>>> for county, voters in counties_dict.items():
+...     print(county, " county" + " has " + str(voters) + " registered voters.")
+... 
+Arapahoe  county has 422829 registered voters.
+Denver  county has 463353 registered voters.
+Jefferson  county has 432438 registered voters.
+>>> for county, voters in counties_dict.items():
+...     print(county, "county" + " has " + str(voters) + " registered voters.")
+... 
+Arapahoe county has 422829 registered voters.
+Denver county has 463353 registered voters.
+Jefferson county has 432438 registered voters.
+
+counties = ["Arapahoe", "Denver", "Jefferson"]
+if counties[1] == "Denver": # print item if second item in list is Denver
+    print(counties[1])
+counties = ["Arapahoe", "Denver", "Jefferson"]
+if "El Paso" in counties:
+    print("El Paso is in the list of counties. ")    
+else: 
+    print("El Paso is not the list of counties. ")
+if "Arapahoe" in counties and "El Paso" in counties:
+    print("Arapahoe and El Paso are in the list of counties. ")  
+else:
+    print("Arapahoe or El Paso is not in the list of counties. ") 
+if "Arapahoe" in counties or "El Paso" in counties:
+    print("Arapahoe or El Paso is in the list of counties. ") 
+else:
+    print("Arapahoe and El Paso are not in the list of counties. ") 
+
+c_tal@LAPTOP-TA85EDV1 MINGW64 ~/Desktop/Election_Analysis (main)
+$  /usr/bin/env C:\\Users\\c_tal\\AppData\\Local\\Programs\\Python\\Python37\\python.exe c:\\Users\\c_tal\\.vscode\\extensions\\ms-python.python-2021.11.1422169775\\pythonFiles\\lib\\python\\debugpy\\launcher 55053 -- c:\\Users\\c_tal\\Desktop\\Election_Analysis\\Python_practice.py 
+Denver
+
+c_tal@LAPTOP-TA85EDV1 MINGW64 ~/Desktop/Election_Analysis (main)
+$  cd c:\\Users\\c_tal\\Desktop\\Election_Analysis ; /usr/bin/env C:\\Users\\c_tal\\AppData\\Local\\Programs\\Python\\Python37\\python.exe c:\\Users\\c_tal\\.vscode\\extensions\\ms-python.python-2021.11.1422169775\\pythonFiles\\lib\\python\\debugpy\\launcher 55088 -- c:\\Users\\c_tal\\Desktop\\Election_Analysis\\Python_practice.py 
+Denver
+El Paso is not the list of counties. 
+
+c_tal@LAPTOP-TA85EDV1 MINGW64 ~/Desktop/Election_Analysis (main)
+$  cd c:\\Users\\c_tal\\Desktop\\Election_Analysis ; /usr/bin/env C:\\Users\\c_tal\\AppData\\Local\\Programs\\Python\\Python37\\python.exe c:\\Users\\c_tal\\.vscode\\extensions\\ms-python.python-2021.11.1422169775\\pythonFiles\\lib\\python\\debugpy\\launcher 54794 -- c:\\Users\\c_tal\\Desktop\\Election_Analysis\\Python_practice.py
+Denver
+El Paso is not the list of counties.
+Arapahoe or El Paso is not in the list of counties.
+
+c_tal@LAPTOP-TA85EDV1 MINGW64 ~/Desktop/Election_Analysis (main)
+$  cd c:\\Users\\c_tal\\Desktop\\Election_Analysis ; /usr/bin/env C:\\Users\\c_tal\\AppData\\Local\\Programs\\Python\\Python37\\python.exe c:\\Users\\c_tal\\.vscode\\extensions\\ms-python.python-2021.11.1422169775\\pythonFiles\\lib\\python\\debugpy\\launcher 54807 -- c:\\Users\\c_tal\\Desktop\\Election_Analysis\\Python_practice.py
+Denver
+El Paso is not the list of counties.
+Arapahoe or El Paso is not in the list of counties.
+Arapahoe or El Paso is in the list of counties.
+
+c_tal@LAPTOP-TA85EDV1 MINGW64 ~/Desktop/Election_Analysis (main)
+$ python
+Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> x = 0
+>>> while x <= 5:
+... print(x)
+  File "<stdin>", line 2
+    print(x)
+        ^
+IndentationError: expected an indented block
+>>> x = 0
+>>> while x <= 5:
+...     print(x)
+... x = x + 1 # set variable to 0 before entering loop, test if x is less than 5, if true, print value of x, increment x by 1, test again
+  File "<stdin>", line 3
+    x = x + 1 # set variable to 0 before entering loop, test if x is less than 5, if true, print value of x, increment x by 1, test again
+    ^
+SyntaxError: invalid syntax
+>>> x = 0
+>>> while x <= 5:
+...     print(x)
+...     x = x + 1
+... 
+0
+1
+2
+3
+4
+5
+>>> for county in counties:
+...     print(county)
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'counties' is not defined
+>>> counties = ["Arapahoe", "Denver", "Jefferson"]
+>>> if counties[1] == "Denver": # print item if second item in list is Denver
+...     print(counties[1])
+... counties = ["Arapahoe", "Denver", "Jefferson"]
+  File "<stdin>", line 3
+    counties = ["Arapahoe", "Denver", "Jefferson"]
+           ^
+SyntaxError: invalid syntax
+>>> if "El Paso" in counties:
+...     print("El Paso is in the list of counties. ")    
+... else:
+...     print("El Paso is not the list of counties. ")
+... if "Arapahoe" in counties and "El Paso" in counties:
+  File "<stdin>", line 5
+    if "Arapahoe" in counties and "El Paso" in counties:
+     ^
+SyntaxError: invalid syntax
+>>>     print("Arapahoe and El Paso are in the list of counties. ")  
+  File "<stdin>", line 1
+    print("Arapahoe and El Paso are in the list of counties. ")
+    ^
+IndentationError: unexpected indent
+>>> else:
+  File "<stdin>", line 1
+    else:
+       ^
+SyntaxError: invalid syntax
+>>>     print("Arapahoe or El Paso is not in the list of counties. ")
+  File "<stdin>", line 1
+    print("Arapahoe or El Paso is not in the list of counties. ")
+    ^
+IndentationError: unexpected indent
+>>> if "Arapahoe" in counties or "El Paso" in counties:
+...     print("Arapahoe or El Paso is in the list of counties. ") 
+... else:
+...     print("Arapahoe and El Paso are not in the list of counties. ") 
+... 
+Arapahoe or El Paso is in the list of counties. 
+>>> for county in counties:
+...     print(county)
+... 
+Arapahoe
+Denver
+Jefferson
+>>> # above is iterating through list of counties - for loop
+>>> for i in range(len(counties)):
+...     print(counties[i]) # iterate through list - i is index, value of 0, 1, 2 in counties list, len gives length - variable increases as loops
+... 
+Arapahoe
+Denver
+Jefferson
+>>> counties_dict = {"Arapahoe": 422829, "Denver": 463353, "Jefferson": 432438}
+>>> for county in counties_dict: #get only keys
+...     print(county)
+... 
+Arapahoe
+Denver
+Jefferson
+>>> for county in counties_dict.keys(): # also get keys
+...     print(county)
+... 
+Arapahoe
+Denver
+Jefferson
+>>> for voters in counties_dict.values(): # get values only
+...     print(voters)
+... 
+422829
+463353
+432438
+>>> for county in counties_dict:
+...     print(counties_dict[county])
+... 
+422829
+463353
+432438
+>>> for county in counties_dict:
+...     print(counties.dict.get(county))
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+AttributeError: 'list' object has no attribute 'dict'
+>>> for county in counties_dict:
+...     print(counties_dict.get(county))
+... 
+422829
+463353
+432438
+>>> for key, value in dictionary_name.items(): # print key-value pair
+...     print(key, value)
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'dictionary_name' is not defined
+>>> for county, voters in counties_dict.items():
+...     print(county, voters)
+... 
+Arapahoe 422829
+Denver 463353
+Jefferson 432438
+>>> for county, voters in counties_dict.items():
+...     print(county +  "has" + voters + "registered voters.")  
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+TypeError: can only concatenate str (not "int") to str
+>>> for county, voters in counties_dict.items()
+  File "<stdin>", line 1
+    for county, voters in counties_dict.items()
+                                              ^
+SyntaxError: invalid syntax
+>>> for county, voters in counties_dict.items():
+...     print(county + "county" + "has" + str(voters) + "registered voters.")
+... 
+Arapahoecountyhas422829registered voters.
+Denvercountyhas463353registered voters.
+Jeffersoncountyhas432438registered voters.
+>>> for county, voters in counties_dict.items():
+...     print(county, " county" + " has " + str(voters) + " registered voters.")
+... 
+Arapahoe  county has 422829 registered voters.
+Denver  county has 463353 registered voters.
+Jefferson  county has 432438 registered voters.
+>>> for county, voters in counties_dict.items():
+...     print(county, "county" + " has " + str(voters) + " registered voters.")
+... 
+Arapahoe county has 422829 registered voters.
+Denver county has 463353 registered voters.
+Jefferson county has 432438 registered voters.
+>>> for county_dict in voting_data:
+...     print(county_dict)
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'voting_data' is not defined
+>>> voting_data = [{"county": "Arapahoe", "registered voters": 422829},
+... 
+... 
+... 
+... 
+... ]
+>>> voting_data = [{"county": "Arapahoe", "registered voters": 422829}, {"county": "Denver", "registered voters": 463353}, {"county": "Jefferson", "registered voters": 432438}]
+>>> for county_dict in voting_data:
+...     print(county_dict)
+... 
+{'county': 'Arapahoe', 'registered voters': 422829}
+{'county': 'Denver', 'registered voters': 463353}
+{'county': 'Jefferson', 'registered voters': 432438}
+>>> for county in range(len(voting_data)):
+...     print(county)
+... 
+0
+1
+2
+>>> for i in range(len(voting_data)):
+...     print(voting_data[i]["county"])
+... 
+Arapahoe
+Denver
+Jefferson
+>>> # above is iterating over list of dicts and printing counties in voting data
+>>> for county_dict in voting_data: # for loop to retrieve each dict.
+...     for value in county_dict.values(): # second for loop use values method on county_dict variable to get values
+...             print(value)
+... 
+Arapahoe
+422829
+Denver
+463353
+Jefferson
+432438
+>>> for county_dict in voting_data:
+...     for value in county_dict:
+...             print(value)
+... 
+county
+registered voters
+county
+registered voters
+county
+registered voters
+>>> for county_dict in voting_data:
+...     print(county_dict.values())
+... 
+dict_values(['Arapahoe', 422829])
+dict_values(['Denver', 463353])
+dict_values(['Jefferson', 432438])
+>>> for county_dict in voting_data:
+...     for key, value in county_dict.items():
+...             print(value)
+... 
+Arapahoe
+422829
+Denver
+463353
+Jefferson
+432438
+>>> for county_dict in voting_data:
+...     print(county_dict["registered_voters"])
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+KeyError: 'registered_voters'
+>>> for county_dict in voting data:
+  File "<stdin>", line 1
+    for county_dict in voting data:
+                                 ^
+SyntaxError: invalid syntax
+>>> for county_dict in voting_data:
+...     print(county_dict['registered_voters'])
+...
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+KeyError: 'registered_voters'
+>>> for county_dict in voting_data:
+...     print(county.dict.values()
+... 
+... 
+... )
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+AttributeError: 'int' object has no attribute 'dict'
+>>> for county_dict in voting_data:
+...     for value in county_dict:
+...             print(value)
+... 
+county
+registered voters
+county
+registered voters
+county
+registered voters
+>>> for county_dict in voting_data:
+...     print(county_dict['registered_voters'])
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+KeyError: 'registered_voters'
+>>> for county_dict in voting_data:
+...     for key, value in county_dict.items():
+...             print(value)
+... 
+Arapahoe
+422829
+Denver
+463353
+Jefferson
+432438
+>>> for county_dict in voting_data:
+...     print(county_dict['registered_voters'])
+...
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+KeyError: 'registered_voters'
+>>> for county_dict in voting_data:
+...     print(county_dict['county'])
+...
+Arapahoe
+Denver
+Jefferson
+>>>  cd c:\\Users\\c_tal\\Desktop\\Election_Analysis ; /usr/bin/env C:\\Users\\c_tal\\AppData\\Local\\Programs\\Python\\Python37\\python.exe c:\\Users\\c_tal\\.vscode\\extensions\\ms-python.python-2021.11.1422169775\\pythonFiles\\lib\\python\\debugpy\\launcher 59141 -- c:\\Users\\c_tal\\Desktop\\Election_Analysis\\Python_practice.py 
+  File "<stdin>", line 1
+    cd c:\\Users\\c_tal\\Desktop\\Election_Analysis ; /usr/bin/env C:\\Users\\c_tal\\AppData\\Local\\Programs\\Python\\Python37\\python.exe c:\\Users\\c_tal\\.vscode\\extensions\\ms-python.python-2021.11.1422169775\\pythonFiles\\lib\\python\\debugpy\\launcher 59141 -- c:\\Users\\c_tal\\Desktop\\Election_Analysis\\Python_practice.py
+    ^
+IndentationError: unexpected indent
+>>> for county, voters in counties_dict.items():
+...     print(f"{county} county has {voters} registered voters.")
+... 
+Arapahoe county has 422829 registered voters.
+Denver county has 463353 registered voters.
+Jefferson county has 432438 registered voters.
+>>> # above is f string to join
+>>> #multi-line f strings below
+>>> candidate_votes = int(input("How many votes did the candidate get in 
+the election? "))
+How many votes did the candidate get in the election? 3345
+>>> total_votes = int(input("What is the total number of votes in the election? "))
+What is the total number of votes in the election? 23123
+>>> message_to_candidate = (f"You received {candidate_votes} number of votes. "f"The total number of votes in the election was {total_votes}. "f"You received {candidate_votes / total_votes * 100}% of the total votes.")
+>>> 
+>>> message_to_candidate = ( f" You received {candidate_votes} number of 
+votes. "f"The total number of votes in the election was {total_votes}. "f"You received {candidate_votes / total_votes * 100}% of the total votes.")
+>>> message_to_candidate = (f" You received {candidate_votes} number of votes. "
+... f" The total number of votes in the election was {total_votes}. "
+... f" You received {candidate_votes / total_votes * 100}% of the total votes. ")
+>>> # below is general format for a number to format in f string
+>>> f'{value:{width}.{precision}}'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'width' is not defined
+>>> # width = number of characters to display 
+>>> # precision = number of decimals places
+>>> # .2f = two decimal places and f means floating-point decimal format
+>>> # add thousands separator with comma placed after width
+>>> # f'{value:{width},.{precision}}'
+>>> message_to_candidate = (f"You received {candidate_votes:, } number of votes. "f"The total number of votes in the election was {total_votes:,}."f"You received {candidate_votes / total_votes * 100:.2f}% of the total votes. ")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: Cannot specify ',' with '\x20'.
+>>> counties_dict   
+{'Arapahoe': 422829, 'Denver': 463353, 'Jefferson': 432438}
+>>>  
