@@ -38,3 +38,22 @@ The first step in the process was to import the election results from the [elect
 
 That is a lot of data!  The data included the ballot ID for each voter and the county name, as well as the candidate that was selected by the voter.  To process the data for analysis, a text file was created to hold the data in a readable format, after the votes were tallied in Visual Studio Code.  Here is a sample of the coding process to determine the number of candidates and begin calculating their votes:  ![coding process - candidate vote count](https://github.com/crtallent/Election_Analysis/blob/main/Resources/Code%20in%20VS.png)
 
+Once all votes were tallied, we were able to see how many votes each candidate received, their percentage of votes won in comparison to the total votes cast, as well as the winner of the election.
+
+## Challenge Summary
+
+As outlined above, we were able to complete an audit of the election results using Visual Studio Code and Python.  We were also able to see these results in a user-friendly format, via the text file we created to store our results.  This process allowed us to calculate the following in an efficient, automated manner:
+
+- There were 369,711 votes cast in the election.
+- The candidates were:
+    - Charles Casper Stockham
+    - Diana DeGette
+    - Raymon Anthony Doane
+- The candidate results were:
+    - Charles Casper Stockham received 23% of the vote and 85,213 number of votes.
+    - Diana DeGette received 73.8% of the vote and 272,892 number of votes.
+    - Raymon Anthony Doane received 3.1% of the vote and 11,606 number of votes.
+- The winner of the election was:  
+    - Diana Degette, who received 73.8% of the vote and 272,892 number of votes.
+    
+The text file summarizing these results can be found in the [text_file]    
