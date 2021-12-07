@@ -33,6 +33,6 @@ For this project, I was contacted by an employee of the Colorado Board of Electi
 2. Punch cards
 3. Direct Recording Electronic Machines
 
-The first step in the process was to import the election results from the csv to Visual Studio Code.  
+The first step in the process was to import the election results from the [election_results.csv](https://github.com/crtallent/Election_Analysis/commit/431f233d4389a336a87f667c47894caf6f8d0de2) to Visual Studio Code.  
 
 
