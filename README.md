@@ -58,4 +58,5 @@ As outlined above, we were able to complete an audit of the election results usi
     
 The text file summarizing these results can be found in the [text_file](https://github.com/crtallent/Election_Analysis/tree/main/analysis).
 
-![text file](
+![text file](![image](https://user-images.githubusercontent.com/91101467/145089649-418e7158-17d2-45d1-87db-f79484e2bc48.png)
+
