@@ -34,5 +34,5 @@ For this project, I was contacted by an employee of the Colorado Board of Electi
 3. Direct Recording Electronic Machines
 
 The first step in the process was to import the election results from the [election_results.csv](https://github.com/crtallent/Election_Analysis/commit/431f233d4389a336a87f667c47894caf6f8d0de2) to Visual Studio Code.  The data was then inspected to determine that there were 
-3 columns and 369,712 rows of data in the [csv file](https://github.com/crtallent/Election_Analysis/blob/main/Resources/CSV.png).
+3 columns and 369,712 rows of data in the ![csv file](https://github.com/crtallent/Election_Analysis/blob/main/Resources/CSV.png "csv").
 
