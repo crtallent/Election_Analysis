@@ -56,4 +56,6 @@ As outlined above, we were able to complete an audit of the election results usi
 - The winner of the election was:  
     - Diana Degette, who received 73.8% of the vote and 272,892 number of votes.
     
-The text file summarizing these results can be found in the [text_file]    
+The text file summarizing these results can be found in the [text_file](https://github.com/crtallent/Election_Analysis/tree/main/analysis).
+
+![text file](
