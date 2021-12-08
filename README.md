@@ -42,11 +42,14 @@ Once all votes were tallied, we were able to see how many votes each candidate r
 
 ## Election - Audit Summary
 
-As outlined above, we were able to complete an audit of the election results using Visual Studio Code and Python.  We were also able to see these results in a user-friendly format, via the text file we created to store our results.  This process allowed us to calculate the results in an efficient, automated manner.  This script can be used for any election going forward, with just a few modifications to the code:
+As outlined above, we were able to complete an audit of the election results using Visual Studio Code and Python.  We were also able to see these results in a user-friendly format, via the text file we created to store our results.  This process allowed us to calculate the results in an efficient, automated manner.  This script can be used for any election going forward, with just a few modifications to the code to select candidate names and the municipality in which the voters cast their votes:
 
 ```
-'candidate_name = row[2]
+candidate_name = row[2]
 ```
-- 'county_name = row[1]()' can be modified for the row number containing the counties, town, or cities where the voters cast their votes
+
+```
+county_name = row[1]
+```
 
 
