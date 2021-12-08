@@ -51,5 +51,5 @@ candidate_name = row[2]
 ```
 county_name = row[1]
 ```
-
+In summary, completing an election audit in Python is a very efficient way to tabulate and certify results.  Using this method, one can easily manipulate the existing script to be used for any election.  This method will also return easily readable results in a text file that takes all of the pertinent information into a summary page - short and to the point.
 
